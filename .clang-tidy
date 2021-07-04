@@ -1,5 +1,5 @@
 ---
-Checks:          '*,-llvmlibc-*,-cppcoreguidelines-avoid-magic-numbers,-readability-magic-numbers,-modernize-use-trailing-return-type,-hicpp-signed-bitwise'
+Checks:          '*,-llvmlibc-*,-cppcoreguidelines-avoid-magic-numbers,-readability-magic-numbers,-modernize-use-trailing-return-type,-hicpp-signed-bitwise,-google-readability-braces-around-statements,-hicpp-braces-around-statements,-readability-braces-around-statements,-cppcoreguidelines-pro-bounds-constant-array-index'
 WarningsAsErrors: ''
 HeaderFilterRegex: ''
 AnalyzeTemporaryDtors: false
