@@ -3,7 +3,7 @@
 #include <string>
 #include <string_view>
 
-void interpret(std::string_view src) {
+void interpret(const std::string_view src) {
     char mem[256]{};
     std::uint8_t p = 0;
     for (std::uint8_t i = 0; src[i] != 0; ++i) {
@@ -49,7 +49,7 @@ int main(int argc, char* argv[]) {
             std::getline(std::cin, inputStr);
 
             if (inputStr == "exit") break;
-            interpret(inputStr);
+            if(!inputStr.empty()) interpret(inputStr);
         }
     } else {
         FILE* inputFile = nullptr;
@@ -59,7 +59,7 @@ int main(int argc, char* argv[]) {
             char ch{};
             while ((ch = getc(inputFile)) != EOF) { inputStr += ch; }
 
-            interpret(inputStr);
+            if(!inputStr.empty()) interpret(inputStr);
 
             fclose(inputFile);
         }
