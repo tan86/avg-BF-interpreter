@@ -58,10 +58,10 @@ int main(int argc, char* argv[]) {
         if (inputFile) {
             char ch{};
             while ((ch = getc(inputFile)) != EOF) { inputStr += ch; }
-
-            if(!inputStr.empty()) interpret(inputStr);
-
+            
             fclose(inputFile);
+            
+            if(!inputStr.empty()) interpret(inputStr);
         }
     }
 
